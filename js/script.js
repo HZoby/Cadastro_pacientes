@@ -74,7 +74,7 @@ function insertPaciente(nome, dataNascimento, cpf, sexo, endereco, statusPacient
    vizualizar('lista')
 }
 
-//Função responsável pela edição dos dados da lista.
+//Edição dos dados da lista.
 function editPaciente(id,nome, dataNascimento, cpf, sexo, endereco, statusPaciente){
     var paciente = listaRegistros.pacientes.find(paciente => paciente.id == id)
     paciente.nome = nome;
@@ -162,7 +162,7 @@ function submeter(e){
 window.addEventListener('load', () => {
     lerBD()
     document.getElementById('cadastroRegistro').addEventListener('submit', submeter)
-    document.getElementById('inputPesquisa').addEventListener('keyup', e => { //aqui faz toda vez que for adicionada uma letra no imput de pesquisa a tabela já atualizar.
+    document.getElementById('inputPesquisa').addEventListener('keyup', e => { //Toda vez que for adicionada uma letra no input de pesquisa a tabela já atualiza.
         pesquisar(e.target.value)
     })
 })
