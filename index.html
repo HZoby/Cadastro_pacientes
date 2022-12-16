@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Cadastro de pacientes </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Zoby">
+        <meta name="description" content="Cadastros de pacientes da clínica ACME.">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="./js/script.js"> </script>
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body page='lista'>
+        
+        <div id='listaRegistros'>
+
+            <div style='display:flex;'>
+                <input style='flex:1'placeholder="PESQUISAR" autofocus id='inputPesquisa' />              
+            </div> 
+            <div>
+                <button onclick="vizualizar('cadastro', true)">Novo Paciente</button>
+            </div> 
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Data de nascimento</th>
+                        <th>CPF</th>
+                        <th>Sexo</th>
+                        <th>Endereço</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id='listaRegistrosBody'> </tbody>
+
+            </table>
+        </div>
+        <form id='cadastroRegistro'>
+            
+            <div class='label'>
+                <div>ID Paciente:</div>
+                <div>
+                <input type='number' readonly id="id" placeholder="ID gerado automaticamente pelo sistema.">
+                </div>
+            </div>       
+
+            <div class='label'>
+                <div>Paciente:</div>
+                <div>
+                    <input id='nome' required maxlength="50" minlength="2" placeholder="Digite o nome do paciente.">
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>Data de Nascimento:</div>
+                <div>
+                    <input type="date" id="dataNascimento" required>
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>CPF:</div>
+                <div>
+                    <input type='number' id="cpf" required placeholder="CPF do paciente (apenas números)." minlength="9" maxlength="11">
+                </div>
+            </div> 
+
+            <div class='label'>
+                <div>Sexo:</div>
+                <div>
+                    <select id="sexo" required>
+                        <option value= "Masculino" selected>Masculino</option>                          
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>Endereço:</div>
+                <div>
+                    <input id="endereco" maxlength="100" placeholder="Endereço do paciente (opcional).">
+                </div>
+            </div>
+
+            <div class='label'>
+                <div>Status:</div>
+                <div>
+                    <select id="status" required>
+                        <option value= "Ativo 🟢" selected>Ativo 🟢</option>                          
+                        <option value="Inativo 🔴">Inativo 🔴</option>
+                    </select>
+                </div>
+            </div>
+
+        <div>
+
+            <button>Salvar</button>
+            <button onclick="vizualizar('lista')" class="cinza" type="button">Cancelar</button>
+
+        </div>
+        
+        </form>
+
+    </body>
+</html>
