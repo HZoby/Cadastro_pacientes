@@ -89,8 +89,7 @@ input:hover{
     padding-right: 10px;
 }
 .label>div>input{
-    flex: 1;
-    
+    flex: 1;   
 }
 
 select{
@@ -104,7 +103,7 @@ select{
     width:120px;
     height:33px;
     outline: none;
-  }
+}
 select:hover {
     background-color:azure;
     cursor: pointer;
