@@ -22,7 +22,6 @@ body[page=lista] #listaRegistros{
 
 body[page=cadastro] #cadastroRegistro{
     display: flex;
-    
 }
    
 body{
@@ -63,7 +62,6 @@ button.vermelho{
 button:hover{
     opacity: 0.8;
 }
-
 
 input{
     border: solid 1px #ccc;

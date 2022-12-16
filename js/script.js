@@ -106,7 +106,7 @@ function perguntarSeDeleta(id){
 }
 
 
-//Limpa os campos de edição, para após salvar deixar os campos do formulário vazio.
+//Limpa os campos de edição, para quando clicar em salvar deixar os campos do formulário vazio.
 function limparEdicao(){
     document.getElementById('id').value = ''
     document.getElementById('nome').value = ''
