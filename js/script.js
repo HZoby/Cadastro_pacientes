@@ -100,9 +100,8 @@ function deletePaciente(id){
 
 //Apenas faz uma verificação se realmente deseja deletar o cadastro do paciente.
 function perguntarSeDeleta(id){
-    if(confirm('Quer deletar o registro de id ' +id)){
-        deletePaciente(id)
-        
+    if(confirm('Quer deletar o registro?')){
+        deletePaciente(id)      
     }
 }
 
